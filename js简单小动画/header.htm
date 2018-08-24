@@ -1,0 +1,116 @@
+		<div id="top" class="top_a">
+			<h6>
+				<!--<a class="a1" href="">预留</a>
+				<a class="a1" href="">预留</a>-->
+				<a class="a2" href="{dede:type typeid='53'}[field:typeurl/]{/dede:type}"> English </a>
+				<a class="a2" href="{dede:global.cfg_cmsurl/}/">中文版 </a>
+                <a class="a2 hany2" href="{dede:type typeid='100'}[field:typeurl/]{/dede:type}"> 한국교류처</a>
+                
+			</h6>
+			<dl>
+				
+				<a href="{dede:global.cfg_cmsurl/}/">
+					<img src="{dede:global.cfg_templets_skin/}/images/logo.png">
+                    <a href="{dede:type typeid='100'}[field:typeurl/]{/dede:type}" class="hany" style="color: #fff; z-index: 9999; position:absolute; top: 72.5%; left: 9.2%;"> 한국교류처</a>
+				</a>
+
+				<h5 class="dc">
+					
+				<a><i onclick="f2('{dede:global.cfg_cmsurl/}/')" id="dh">首页</i><!--[if gte ie 7]><!--></a>
+				{dede:channelartlist row='3' typeid='1,2,3' }
+				<a><i onclick="f2('{dede:field name='typeurl'/}')" id="dh">{dede:field name='typename'/}</i><!--[if gte ie 7]><!--></a>
+				{/dede:channelartlist}
+                <a class="dh_cur">
+                	{dede:type typeid='4'}<i id="dh" class="dh_cur">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='4' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+                <a class="dh_cur">
+                	{dede:type typeid='9'}<i id="dh" class="dh_cur">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='9' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+                <a class="dh_cur" style="width: 10%;">
+                	{dede:type typeid='13'}<i id="dh" class="dh_cur">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='13' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+                <a class="dh_cur" style="5%">
+                	{dede:type typeid='16'}<i id="dh" class="dh_cur">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='16' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+                <a class="dh_cur">
+                	{dede:type typeid='20'}<i id="dh" class="dh_cur">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='20' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+                <a>
+                	{dede:type typeid='23'}<i onclick="f2('[field:typelink /]')" id="dh">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='23' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+                <a class="dh_cur">
+                	{dede:type typeid='24'}<i id="dh" class="dh_cur">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='24' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+                <a class="dh_cur">
+                	{dede:type typeid='28'}<i id="dh" class="dh_cur">[field:typename/]</i>{/dede:type}
+                    <!--[if gte ie 7]><!-->
+                    <ul>
+                    	{dede:channel type='son' typeid='28' titlelen='30'}
+                        <li class="aul1" onclick="location='[field:typeurl/]'">[field:typename/]</li>
+                        {/dede:channel}
+                    </ul>
+                </a>
+
+                <script type="text/javascript">
+                    function f2(var1,var2){
+                        if(var2=="target=_blank"){
+                        window.open(var1);
+                          }
+                    else{
+                    window.location.href=var1;
+                        }
+                    }
+                </script>
+                <!--#endeditable-->
+				</h5>
+				<h5 class="dm">
+					<a class="mu_logo" onclick="abc('menu_m','className','menu_1')"></a>
+					<!--<a class="mu_logo" onclick="abc('search','className','search_1')"></a>-->
+				</h5>
+			</dl>
+		
+        <script language="javascript" src="{dede:global.cfg_templets_skin/}/js/base64.js"></script>
+        <script language="javascript" src="{dede:global.cfg_templets_skin/}/js/formfunc.js"></script>
+        </div>

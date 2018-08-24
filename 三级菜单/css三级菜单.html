@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+    	body,ul,li,a,p{margin: 0;padding: 0;}
+    	a{text-decoration: none; color: #555;font-size: 23px;}
+        .clearfix:after,.zn-clearfix:before{content: ""; visibility: hidden; display: block; height: 0; clear: both; }
+        .clearfix{zoom:1;margin: 20px auto; width:1700px;}
+        .zn-header-nav ul li {
+		    position:relative; 
+		    display: inline-block;
+		}
+		ul .sub-menu.zn-header-menussub{
+		    position: absolute;
+		    background: #fff;
+		    left: 0;
+		    top: 40px;
+		    width: 175px;
+		    border-radius: 5px;
+			-moz-box-shadow: 0px 0px 3px #ccc;
+			-webkit-box-shadow: 0px 0px 3px #ccc;
+			box-shadow: 0px 0px 3px #ccc;
+		}
+		ul .sub-menu.zn-header-menussub:after{
+		    content: "";
+		    position: absolute;
+		    left: -66px;
+		    background: url(../images/navtop.png);
+		    z-index: 3;
+		    top: -14px;
+		    top: 3px\9;
+		    height: 14px;
+		    font-size: 0px;
+		    overflow: hidden;
+		    width: 174px;
+		}
+		ul .sub-menu.zn-header-menussub li>a{
+		    text-align: left;
+		    margin: 0;
+		    display: block;
+		    padding: 4px 25px;
+		}
+		ul.zn-header-menus>li>a:hover {
+			background: #4c2f0d;
+			color: #fff;
+		}
+		ul .sub-menu.zn-header-menussub li:hover a{
+		    background: #644b2e;
+			color: #fff;	
+		}
+		ul .sub-menu.zn-header-menussub li,ul .zn-header-menusbb.sub-menu li{
+			width: 100%;
+			line-height: 30px;
+		}
+		ul .zn-header-menusbb.sub-menu{
+			position: absolute;
+			top: 0;
+		    left: 175px;
+		    background: #644b2e;
+		    width: 150px;
+		    padding-bottom: 10px;
+		}
+		ul .sub-menu {
+		    display:none;
+		}
+		.zn-header-nav ul .zn-header-menusbb.sub-menu li a{
+			color: #fff;
+		}
+		.zn-header-nav ul .zn-header-menusbb.sub-menu li:hover a{
+			background: #ccc;
+		}
+		ul.zn-header-menus li:hover .zn-header-menussub{
+			display: block;
+		}
+		ul .sub-menu.zn-header-menussub li:hover a+.zn-header-menusbb{
+			display: block;
+		}
+    </style>
+</head>
+<body>
+<div class="zn-header-nav">
+    <ul class="zn-header-menus">
+        <li><a href="./" >首頁</a></li>
+        <li>
+            <a href="#" class="active">產品介紹</a>
+            <ul class="sub-menu zn-header-menussub ">
+                <li>
+                    <a href="#2">照片書</a>
+                    <ul  class="sub-menu  zn-header-menusbb">
+                        <li><a href="#1">精裝</a></li>
+                        <li><a href="#1">簡裝</a></li>
+                        <li><a href="#1">騎馬釘</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#2">卡片系列</a>
+                    <ul  class="sub-menu  zn-header-menusbb">
+                        <li><a href="#1">半島鐵盒</a></li>
+                        <li><a href="#1">分享卡</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">相片月歷</a>
+                    <ul  class="sub-menu  zn-header-menusbb">
+                        <li><a href="#1">臺歷</a></li>
+                        <li><a href="#1">掛歷</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">相片小物</a>
+                    <ul  class="sub-menu  zn-header-menusbb">
+                        <li><a href="#1">拼圖</a></li>
+                        <li><a href="#1">水杯</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">服務</a></li>
+        <li><a href="#">製作指南</a></li>
+        <li><a href="#">客服聯絡</a></li>
+        <li><a href="#">公司背景</a></li>
+    </ul>
+</div>
+</body>
+</html>

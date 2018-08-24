@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>{dede:global.cfg_webname/}</title>
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta name="keywords" content="{dede:global.cfg_keywords/}">
+		<meta name="description" content="{dede:global.cfg_description/}">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta content="text/html; charset=utf-8" http-equiv="content-type">
+		<meta content="ie=edge,chrome=1" http-equiv="x-ua-compatible">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/zmyui.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/zmymedia.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/zmyanimation.css">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/index.vsb.css">
+		<script src="{dede:global.cfg_templets_skin/}/js/zmyui.js"></script>
+		<LINK rel="prefetch" href="{dede:global.cfg_templets_skin/}/css/banner/life_1.jpg">
+		<LINK rel="prefetch" href="{dede:global.cfg_templets_skin/}/css/banner/life_2.jpg">
+		<LINK rel="prefetch" href="{dede:global.cfg_templets_skin/}/css/banner/life_3.jpg">
+		<LINK rel="prefetch" href="{dede:global.cfg_templets_skin/}/css/banner/life_4.jpg">
+		<script language="javascript" src="{dede:global.cfg_templets_skin/}/js/dynclicks.js"></script>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/counter.js"></script>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery1.42.min.js"></script>
+		<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.2.1.js"></script>
+		<style>
+		.bnd{display:none;}
+	</style>
+	</head>
+
+	<body>
+		 
+		{dede:include filename='rok_header.htm'/}
+		
+		<div class="banner"><!--<img src="{dede:global.cfg_templets_skin/}/images/banner.gif">-->
+		<div id="bnd">
+			{dede:arclist row='10' orderby='pubdate' orderway="desc" typeid='34'}
+		    <div class="bnd"><img src="[field:litpic/]" alt="首页幻灯片"></div>
+		    {/dede:arclist}
+		</div>
+			<!--<dl>-->
+				<!--<h4>
+					<b class="mu cp">
+						<div id="gaga">
+					<div class="gaga"><i class="bnd" onclick="abc('banner','src','{dede:global.cfg_templets_skin/}/banner1.htm')" onmousedown="tab(this)">01</i></div>
+					<div class="gaga"><i class="bnd" onclick="abc('banner','src','{dede:global.cfg_templets_skin/}/banner2.htm')" onmousedown="tab(this)">02</i></div>
+					<div class="gaga"><i class="bnd" onclick="abc('banner','src','{dede:global.cfg_templets_skin/}/banner3.htm')" onmousedown="tab(this)">03</i></div>
+					 </div>
+				    </b>
+				</h4>-->
+				<!--<h2>-->
+				<script language="javascript">
+                    var d=new date();
+                    var mlables = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], s = "", v;
+                    s +=  mlables[d.getmonth()] + " " + d.getfullyear();
+                    document.write(s);
+                </script>
+                <script language="javascript">
+                    var len = $("#bnd div.bnd").length; // 有几div
+                    var n = 0;
+                    $("#bnd div.bnd").eq(0).show(); //默认第一个为显示
+                    setInterval(function(){
+	                if(n==0){     // 到了最后一个则又重复执行
+	                n=len
+	                }else{
+	                n--;
+	                $("#bnd div.bnd").eq(n).show().siblings().hide();
+	                }
+                    },3000)       // 每三秒执行一次
+                </script>
+                <!--<i onclick="location='/'">more</i>-->
+				<!--</h2>-->
+			<!--</dl>-->
+		</div>
+		<div class="news">
+
+			<script language="javascript" src="{dede:global.cfg_templets_skin/}/js/openlink.js"></script>
+			<h2 class="title" onclick="location='{dede:type typeid='109'}[field:typelink /]{/dede:type}'">学院新闻 <i>更多</i><b></b></h2>
+			<ul>
+				{dede:arclist typeid='109' limit='0,1' titlelen='66' infolen='100' orderby='pubdate' orderway="desc"}
+				<li onclick="location='[field:arcurl/]'">
+					<img src="[field:litpic/]" alt="[field:title/]">
+					<h5>[field:infos/]…</h5>
+					<h1><a href="[field:arcurl/]">[field:title/]</a></h1>
+				</li>
+				{/dede:arclist}
+				{dede:arclist typeid='109' limit='2,1' titlelen='66' infolen='100' orderby='pubdate' orderway="desc"}
+				<li onclick="location='[field:arcurl/]'">
+					<img src="[field:litpic/]" alt="[field:title/]">
+					<h5>[field:infos/]…</h5>
+					<h1><a href="[field:arcurl/]">[field:title/]</a></h1>
+				</li>
+				{/dede:arclist}
+			</ul>
+			<ul>
+                {dede:arclist typeid='109' limit='1,1' titlelen='66' infolen='100' orderby='pubdate' orderway="desc"}
+				<li onclick="location='[field:arcurl/]'">
+					<img src="[field:litpic/]" alt="[field:title/]">
+					<h5>[field:infos/]…</h5>
+					<h1><a href="[field:arcurl/]">[field:title/]</a></h1>
+				</li>
+				{/dede:arclist}
+				{dede:arclist typeid='109' limit='3,1' titlelen='66' infolen='100' orderby='pubdate' orderway="desc"}
+				<li onclick="location='[field:arcurl/]'">
+					<img src="[field:litpic/]" alt="[field:title/]">
+					<h5>[field:infos/]…</h5>
+					<h1><a href="[field:arcurl/]">[field:title/]</a></h1>
+				</li>
+				{/dede:arclist}
+			</ul>
+			<script>
+				_showdynclickbatch(['dynclicks_u4_2060', 'dynclicks_u4_2059', 'dynclicks_u4_2052', 'dynclicks_u4_2053'],
+				[2060, 2059, 2052, 2053], "wbnews", 1034901739)
+			</script>
+			<h2 class="title dsfctit" onclick="location='{dede:type typeid='105'}[field:typelink /]{/dede:type}'">工作人员  <i>更多</i><b></b></h2>
+			
+			
+			
+			<div class="dsqh">
+			<div class="dsul">
+			{dede:arclist row='30' titlelen='66' orderby="pubdate" orderway="desc" typeid='105'}
+			<ul class="dsfc">
+				<li onclick="location='[field:arcurl/]'">
+					<img src="[field:litpic/]" alt="[field:title/]">
+					<h5>[field:infos/]…</h5>
+					<h1>[field:title/]</h1>
+				</li>
+			</ul>
+			{/dede:arclist}
+			</div>	
+			</div>
+			
+
+			
+			<!--<script type="text/javascript">jQuery(".dsqh").slide({ mainCell:".dsul",autoPlay:true,effect:"left", vis:5, scroll:5, autoPage:true, pnLoop:false });</script>-->
+			<script type="text/javascript">jQuery(".dsqh").slide({ mainCell:".dsul",autoPlay:true,effect:"leftMarquee",interTime:50,vis:4  });</script>
+			
+			<script>
+				_showdynclickbatch(['dynclicks_u6_2034', 'dynclicks_u6_2035'], [2034, 2035], "wbnews", 1034901739)
+			</script>
+		</div>
+		<div class="event">
+			
+			<h2 class="title cgxx_tit">招生宣传<b></b></h2>
+			
+			<dl class="cgbj1" onclick="location='{dede:type typeid='107'}[field:typelink /]{/dede:type}'">
+				<h1>本科招生<br></h1>
+			</dl>
+			<dl class="cgbj2" onclick="location='{dede:type typeid='108'}[field:typelink /]{/dede:type}'">
+				<h1>研究生招生<br></h1>
+			</dl>
+			<dl class="cgbj3" onclick="location='{dede:type typeid='110'}[field:typelink /]{/dede:type}'">
+				<h1>就业协议<br></h1>
+			</dl>
+			<dl class="cgbj4" onclick="location='{dede:type typeid='43'}[field:typelink /]{/dede:type}'">
+				<h1>敬请期待。。。<br></h1>
+			</dl>
+			<dl class="cgbj5" onclick="location='{dede:type typeid='66'}[field:typelink /]{/dede:type}'">
+				<h1>敬请期待。。。<br></h1>
+			</dl>
+			<script>
+				_showdynclickbatch(['dynclicks_u8_2033', 'dynclicks_u8_2021', 'dynclicks_u8_2003'], [2033, 2021, 2003], "wbnews", 1034901739)
+			</script>
+			
+			<h2 class="title" style="background: #fff;box-shadow: 0 0 0 0px #cde9f9 inset"></h2>
+			
+			<h2 class="title cgxx_tit">关于学院<b></b></h2>
+			
+			<dl class="lxbj1">
+				<h1 onclick="location='{dede:type typeid='101'}[field:typelink /]{/dede:type}'">院长介绍</h1>
+			</dl>
+			<dl class="lxbj2">
+				<h1 onclick="location='{dede:type typeid='103'}[field:typelink /]{/dede:type}'">学院概括</h1>
+			</dl>
+			<dl class="lxbj3">
+				<h1 onclick="location='{dede:type typeid='104'}[field:typelink /]{/dede:type}'">教学概括</h1>
+			</dl>
+			<dl class="lxbj4">
+				<h1 onclick="location='{dede:type typeid='111'}[field:typelink /]{/dede:type}'">联系我们</h1>
+			</dl>
+			
+			<script>
+			_showDynClickBatch(['dynclicks_u10_1998','dynclicks_u10_1999','dynclicks_u10_1996','dynclicks_u10_1997'],[1998,1999,1996,1997],"wbnews", 1034901739)
+			</script>
+			<!--#endeditable-->
+		</div>
+		<!--<div class="xzyd">
+			<a href="{dede:type typeid='38'}[field:typelink /]{/dede:type}" target="_blank"><i class="xzwz">&#xe60a;</i>Download Garden</a>
+		</div>-->
+		<div class="isa">
+			<a href="{dede:type typeid='39'}[field:typelink /]{/dede:type}" target="_blank">International Students'Alumni</a>
+		</div>
+		<!--<div class="life_title">
+			<h2 class="title">四海宾朋共享渤海大学盛世</h2>
+		</div>-->
+		<div id="life" class="l2">
+            <dl onclick="location='{dede:type typeid='49'}[field:typelink /]{/dede:type}'" onmouseover="abc('life','className','l1')">
+                <p><i class="xzwz">&#xe609;</i><br><b>国际合作</b><br><br><a href="">国际合作</a></p>
+            </dl>
+            <dl onclick="location='{dede:type typeid='50'}[field:typelink /]{/dede:type}'" onmouseover="abc('life','className','l2')">
+                <p><i class="xzwz">&#xe609;</i><br><b>留学生风采</b><br><br><a>留学生风采</a></p>
+            </dl>
+            <dl onclick="location='{dede:type typeid='51'}[field:typelink /]{/dede:type}'" onmouseover="abc('life','className','l3')">
+                <p><i class="xzwz">&#xe609;</i><br><b>渤海大学学子在海外</b><br><br><a>渤海大学学子在海外</a></p>
+            </dl>
+            <dl onclick="location='{dede:type typeid='52'}[field:typelink /]{/dede:type}'" onmouseover="abc('life','className','l4')">
+                <p><i class="xzwz">&#xe609;</i><br><b>外国专家风采</b><br><br><a>外国专家风采</a></p>
+            </dl>
+		</div>
+		    
+		<div class="media_link"><img class="background" src="{dede:global.cfg_templets_skin/}/images/media_link.png">
+			<dl class="media">
+				<img class="media_0" src="{dede:global.cfg_templets_skin/}/images/media_0.png" onclick="window.open('/')">
+				<video class="media_1" controls="controls">
+  <source src="{dede:global.cfg_templets_skin/}/video/bdxcp.mp4" type="video/ogg">
+  <source src="{dede:global.cfg_templets_skin/}/video/bdxcp.mp4" type="video/mp4">
+Your browser does not support video tags, you need more than IE9 browser access! If you are using <br>360, QQ, Sogou, roaming and other browsers, set to speed mode
+</video>
+
+			    <!--<img class="media_1" src="{dede:global.cfg_templets_skin/}/images/media_1.jpg" onclick="window.open('/')">
+			    <img class="media_3" src="{dede:global.cfg_templets_skin/}/images/media_3.png"  onclick="window.open('/')">-->
+			</dl>
+			<dl class="link">
+				<h1>校内链接</h1>
+				<dt>
+                    <h5>
+                    	{dede:flink row='5' type="text" titlelen="24" typeid="1"}  
+                        <p>[field:link /]<i></i></p>
+                        {/dede:flink}
+                    </h5>
+				</dt>
+			</dl>
+			<dl class="link share">
+				<h1>友情链接</h1>
+				<dt>
+                    <h5>
+                    	{dede:flink row='5' type="text" titlelen="24" typeid="3"}  
+                        <p>[field:link /]<i></i></p>
+                        {/dede:flink}
+                    </h5>
+				</dt>
+			</dl>
+			<h6 class="copyright">
+			联系地址：韩国京畿道坡州市东山3路35 中国渤海大学韩国交流处　　技术支持：<a href="http://www.baisoo.net" target="_blank">锦州网络公司</a><br/>
+                      联系电话：+82-31-941-8064　　联系传真：+82-31-945-8064　　Email：bhukorea@naver.com
+			</h6>
+		</div>
+		<div class="life_title1">
+			       联系地址：韩国京畿道坡州市东山3路35 中国渤海大学韩国交流处<br/>
+                             联系电话：+82-31-945-8064<br/>
+                             联系传真：+86-416-3400213<br/>
+                Email：bhukorea@naver.com<br/>
+                             技术支持：<a href="http://www.baisoo.net" target="_blank">锦州网络公司</a>
+		</div>
+		
+		{dede:include filename='en_nav.htm'/}
+		
+	</body>
+
+</html>
